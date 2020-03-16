@@ -1,0 +1,37 @@
+@font-face {font-family: Lato;src: url(../fonts/Lato/Lato-Regular.ttf);}
+@font-face {font-family: Lobster; src: url(../fonts/Lobster/Lobster-Regular.ttf);}
+
+.body-app{background: #eeeeee;}
+
+.btn-dappa{background: linear-gradient(150deg, #003F5D 20% ,#00A286); color: #FFF; transition: all 0.5s ease;}
+.btn-dappa:hover{background: linear-gradient(150deg, #003F5D 20% ,#00A286); color: #FFF;}
+.green-default{color: #00A286;}
+.bg-dappa{background: linear-gradient(150deg, #003F5D  ,#00A286); color: #FFF;}
+.dappa-input{border-color: #009B83 !important;}
+a.dappa-logo-font{font-family: Lobster !important;}
+.dappa-border{border: 1px solid #009B83;}
+
+p, a, h1, h2, h3, h4, h5, h6, input, button{font-family: Lato !important;}
+.login-size{width: 100px !important; height: auto !important;}
+img.square-bg{width: 355px; z-index: -999; position: absolute; float: right; margin-left: 43%; margin-top: -60%; transform: rotate(131deg);}
+.square-bg-left{width: 355px; z-index: -999; position: absolute; float: right; margin-left: -73%; margin-top: -15%; transform: rotate(-45deg);}
+.navbar-dark .navbar-nav .nav-link{transition: all 0.3s ease !important;}
+.navbar-dark .navbar-nav .nav-link:hover{color: rgba(255,255,255,1) !important;}
+.form-control{box-shadow: none !important;}
+.lh-1{line-height: 1 !important;}
+a.confirm-doctor:focus{color: #FFF;}
+a.animate-btn{transition: all ease 0.5s;}
+a.animate-btn:focus{background: #FFF; border: 1px solid #009B83; color: #009B83; box-shadow: none !important;}
+a.like-btn{transition: all ease 0.5s; color: #003F5D;}
+a.like-btn:focus{background: #FFF;color: #009B83; box-shadow: none !important;}
+.card{box-shadow: 0px 0px 2px #CCC !important;}
+.size-logo-card-top{width: 55px; height: 64px;}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{ color: #00A286 !important; }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link { color: #495057 !important; }
+a#nav-profile-tab{ width: 50% !important; text-align: center; }
+
+.form-dappa { box-shadow: none !important; outline: none !important; border-color: #009B83 !important; }
+ul.time-ul { list-style-type: none; }
+ul.time-ul li { display: inline; }
+
