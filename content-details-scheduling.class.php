@@ -18,7 +18,13 @@
         </p>
 
         <p class="lead green-default"><strong><small>Horário de Funcionamento</small></strong> <br> 
-            <span class="text-secondary"><small> <?php echo $list_clinic_schedule_detail['time_clinics']; ?> </small></span>
+            <span class="text-secondary">
+              <small>
+                Segunda a Sexta: <?php echo $list_clinic_schedule_detail['weekstart_time_clinics']; ?> às <?php echo $list_clinic_schedule_detail['weekfinal_time_clinics']; ?> <br>
+
+                Sábado: <?php echo $list_clinic_schedule_detail['weekendstart_time_clinics']; ?> às <?php echo $list_clinic_schedule_detail['weekendfinal_time_clinics']; ?> 
+              </small>
+            </span>
         </p>
 
         <p class="lead green-default"><strong><small>Especialidades</small></strong> <br> 
@@ -43,10 +49,15 @@
                 <span><small><?php echo $list_resume_clinic_schedule_detail['spec_doctors']; ?></small></span>
                 </p>
 
-                <p class="lead green-default">R$ 000,00</p>
+                <p class="lead green-default">R$ <?php echo $list_specs_time_schedule['price_especs'];?></p>
+
+                <p class="lead text-white"><?php $date = $_GET['date']; echo $date; ?>
+                <form method="get">
+                  
+                </form>
                   <?php // GET PARAMS
                     echo "
-                      <a href='time-schedule.php?local=$list_clinic_schedule_detail[name_clinics]&&spec=$list_resume_clinic_schedule_detail[spec_doctors]&&doctor=$list_resume_clinic_schedule_detail[id_doctors]' class='btn btn-success btn-block'>Prosseguir</a>
+                      <a href='time-schedule.php?date=$date&&local=$list_clinic_schedule_detail[name_clinics]&&spec=$list_resume_clinic_schedule_detail[spec_doctors]&&doctor=$list_resume_clinic_schedule_detail[id_doctors]' class='btn btn-success btn-block'>Prosseguir</a>
                     ";
                   ?>
               </div>

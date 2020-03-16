@@ -29,16 +29,16 @@
     <?php include("header.class.php"); ?>
 
     <?php 
-    // CREATE SCHEDULE
-        $intervalo  = $list_specs_time_schedule['duration_especs'];
 
         // GET NAME OF THE DAY FOR SCHEDULE HOUR
         $date_schedule = $_GET['date'];
+        $date_schedule_br = date("d/m/Y", strtotime($date_schedule));
 
         // GET DATA FOR HOURS
         $clinic_schedule = $_GET['local'];
         $spec_schedule = $_GET['spec'];
         $doctor_schedule = $_GET['doctor'];
+        $time_schedule = $_GET['time'];
 
         $months = array (1 => "Janeiro", 2 => "Fevereiro", 3 => "Março", 4 => "Abril", 5 => "Maio", 6 => "Junho", 7 => "Julho", 8 => "Agosto", 9 => "Setembro", 10 => "Outubro", 11 => "Novembro", 12 => "Dezembro");
         $weekdays = array (1 => "Segunda-Feira",2 => "Terça-Feira",3 => "Quarta-Feira",4 => "Quinta-Feira",5 => "Sexta-Feira",6 => "Sábado",0 => "Domingo");
@@ -54,40 +54,19 @@
 
         $get_clinic_hours = mysqli_query($link, "SELECT * FROM clinics WHERE name_clinics = '$clinic_schedule'");
         $list_clinic_hours = mysqli_fetch_array($get_clinic_hours);
-        
-        if($nameweekday == "Sábado"){
-          $inicio = $list_clinic_hours['weekendstart_time_clinics'];
-          $final  = $list_clinic_hours['weekendfinal_time_clinics'];        
-        }else{
-          $inicio = $list_clinic_hours['weekstart_time_clinics'];          
-          $final = $list_clinic_hours['weekfinal_time_clinics'];          
-        }
+
+        $get_doctor_resume_schedule = mysqli_query($link, "SELECT * FROM doctors WHERE id_doctors = '$doctor_schedule'");
+        $list_doctor_resume_schedule = mysqli_fetch_array($get_doctor_resume_schedule);
 
         echo "
           <div class='container'>
-            <h4 class='mt-4 text-secondary'>Horários Disponíveis</h4><hr>
+            <h4 class='mt-4 text-secondary'>Resumo</h4><hr>
+            <p class=''><strong class='text-success'>Local:</strong> $clinic_schedule</p>
+            <p class=''><strong class='text-success'>Especialista:</strong> $list_doctor_resume_schedule[name_doctors]</p>
+            <p class=''><strong class='text-success'>Especialidade:</strong> $spec_schedule</p>
+            <p class=''><strong class='text-success'>Data do agendamento:</strong> <br> $nameweekday, dia $date_schedule_br às $time_schedule h</p>
         ";
-        //echo "<ul class='time-ul mt-5 mb-2 p-2'>";
-        do{
-            list($hora, $minuto) = explode(':', $inicio);
-            $time_schedule_value = "$inicio \r\n";
-            $inicio = date("H:i", mktime($hora, $minuto + $intervalo) );
-            //echo $time_schedule_value;
-            $count_time_schedule = mysqli_num_rows($time_schedule_value);
-
-            /*echo "
-                <li class='rounded'>
-                    <input type='radio' value='$time_schedule_value' id='$time_schedule_value' name='time_schedule'>
-                    <label for='time_schedule'>$time_schedule_value</label>
-                </li>
-            ";*/
-
-            echo "
-              <a href='resume-schedule.php?time=$time_schedule_value&&date=$date_schedule&&local=$clinic_schedule&&spec=$spec_schedule&&doctor=$doctor_schedule' class='btn btn-outline-info ml-2 mt-2 mr-2'>$time_schedule_value</a>
-            ";
-        }       
-        while( $inicio <= $final );
-        //echo "</ul>";
+        
         echo "</div>"
         
     ?>

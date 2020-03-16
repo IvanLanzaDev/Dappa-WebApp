@@ -33,5 +33,5 @@ a#nav-profile-tab{ width: 50% !important; text-align: center; }
 
 .form-dappa { box-shadow: none !important; outline: none !important; border-color: #009B83 !important; }
 ul.time-ul { list-style-type: none; }
-ul.time-ul li { display: inline; }
+ul.time-ul li { display: inline; background: #00A286; padding: 2%; margin-right: 2%; border-radius: 7px; }
 
