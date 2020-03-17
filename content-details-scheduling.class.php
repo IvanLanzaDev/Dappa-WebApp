@@ -51,7 +51,7 @@
 
                 <p class="lead green-default">R$ <?php echo $list_specs_time_schedule['price_especs'];?></p>
 
-                <p class="lead text-white"><?php $date = $_GET['date']; echo $date; ?>
+                <p class="lead text-white"><?php $date = $_GET['date']; ?>
                 <form method="get">
                   
                 </form>

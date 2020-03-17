@@ -60,11 +60,68 @@
 
         echo "
           <div class='container'>
-            <h4 class='mt-4 text-secondary'>Resumo</h4><hr>
-            <p class=''><strong class='text-success'>Local:</strong> $clinic_schedule</p>
-            <p class=''><strong class='text-success'>Especialista:</strong> $list_doctor_resume_schedule[name_doctors]</p>
-            <p class=''><strong class='text-success'>Especialidade:</strong> $spec_schedule</p>
-            <p class=''><strong class='text-success'>Data do agendamento:</strong> <br> $nameweekday, dia $date_schedule_br às $time_schedule h</p>
+            <h4 class='mt-4 text-secondary text-center'>Agendamento</h4><hr>
+
+            <div class='row'>
+              <div class='col-4'>
+                <p class='text-info'>Data</p>
+                <p class=''>$date_schedule_br</p>
+             </div>
+
+              <div class='col-4'>
+                <p class='text-info'>Horário</p>
+                <p class=''>$time_schedule</p>
+              </div>
+            </div>
+            
+            <div class='row mt-4'>
+              <div class='col-12'>
+                <p class='text-info'>Local</p>
+                <p class=''>$clinic_schedule</p>
+             </div>
+            </div> 
+
+            <div class='row mt-4'>
+              <div class='col-6'>
+                <p class='text-info'>Especialista</p>
+                <p class=''>$list_doctor_resume_schedule[name_doctors]</p>
+             </div>
+             <div class='col-6'>
+                <p class='text-info'>Especialidade</p>
+                <p class=''>$spec_schedule</p>
+             </div>
+            </div> 
+
+            <div class='row mt-4'>
+              <div class='col-12 text-center'>
+                <h3 class=''>R$ $list_specs_time_schedule[price_especs]</h3>
+             </div>
+            </div> 
+
+            <div class='row mt-4'>
+              <div class='col-12 text-center'>
+                
+              
+              <form action='https://pagseguro.uol.com.br/checkout/v2/payment.html' method='post' onsubmit='PagSeguroLightbox(this); return false;'>
+              
+              <input type='hidden' name='code' value='3DA4854803038D844474CFA42E64BFA2' />
+              <input type='hidden' name='iot' value='button' />
+              <input type='image' src='https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-assina.gif' name='submit' alt='Pague com PagSeguro - é rápido, grátis e seguro!' />
+              </form>
+              <script type='text/javascript' src='https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js'></script>
+              
+                
+              </div>
+            </div>
+
+            <div class='row mt-4'>
+              <div class='col-12 text-center'>
+                <a href='#' class='btn btn-outline-success'>Pagar no consultório</a>
+              </div>
+            </div>
+            
+           
+            
         ";
         
         echo "</div>"
