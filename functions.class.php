@@ -185,5 +185,26 @@
         $list_specs_time_schedule = mysqli_fetch_array($get_specs_time_schedule);
 
     
+    // CONFIRM PAYMENT
+        $date_payment = $_POST['date_schedule'];
+        $time_payment = $_POST['time_schedule'];
+        $clinic_payment = $_POST['clinic_schedule'];
+        $doctor_payment = $_POST['doctor_schedule'];
+        $spec_payment = $_POST['spec_schedule'];
+        $confirm_payment = $_POST['confirm_schedule'];
+
+        $confirm_btn = $_POST['confirm_payment_btn'];
+        $consult_btn = $_POST['consult_payment_btn'];
+
+        if(isset($confirm_btn)) {
+            //$confirm_payment = mysqli_query($link, "INSERT INTO schedule (date_schedule, hour_schedule, local_schedule, doctor_schedule, spec_schedule, payment_schedule, confirm_schedule) VALUES ('$date_payment', '$time_payment', '$clinic_payment', '$doctor_payment', '$spec_payment', 'PagSeguro' '$confirm_payment')");
+
+            header("Location: schedule.php?type=1");
+        }
+        elseif(isset($consult_btn)) {
+            //$consult_payment = mysqli_query($link, "INSERT INTO schedule (date_schedule, hour_schedule, local_schedule, doctor_schedule, spec_schedule, payment_schedule, confirm_schedule) VALUES ('$date_payment', '$time_payment', '$clinic_payment', '$doctor_payment', '$spec_payment', 'Consultório' '$confirm_payment')");
+
+            header("Location: schedule.php?type=2");
+        }
         
     ?>

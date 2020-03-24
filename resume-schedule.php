@@ -98,30 +98,24 @@
              </div>
             </div> 
 
-            <div class='row mt-4'>
-              <div class='col-12 text-center'>
+            
+              <div class='col-12 text-center mt-4'>
                 
-              
-              <form action='https://pagseguro.uol.com.br/checkout/v2/payment.html' method='post' onsubmit='PagSeguroLightbox(this); return false;'>
-              
-              <input type='hidden' name='code' value='3DA4854803038D844474CFA42E64BFA2' />
-              <input type='hidden' name='iot' value='button' />
-              <input type='image' src='https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-assina.gif' name='submit' alt='Pague com PagSeguro - é rápido, grátis e seguro!' />
-              </form>
-              <script type='text/javascript' src='https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js'></script>
-              
-                
-              </div>
-            </div>
+                <form method='post'>
 
-            <div class='row mt-4'>
-              <div class='col-12 text-center'>
-                <a href='#' class='btn btn-outline-success'>Pagar no consultório</a>
-              </div>
-            </div>
-            
-           
-            
+                  <input type='hidden' name='date_schedule' value='$date_schedule'>
+                  <input type='hidden' name='hour_schedule' value='$time_schedule'>
+                  <input type='hidden' name='local_schedule' value='$clinic_schedule'>
+                  <input type='hidden' name='doctor_schedule' value='$doctor_schedule'>
+                  <input type='hidden' name='spec_schedule' value='$spec_schedule'>
+                  <input type='hidden' name='confirm_schedule' value='Não'>
+
+                  <button type='submit' class='btn btn-success btn-lg btn-block mb-3' name='confirm_payment_btn'>Efetuar Pagamento</button>
+                  <button type='submit' class='btn btn-outline-info btn-lg btn-block' name='consult_payment_btn'>Pagar no consultório</button>
+
+                </form>
+
+              </div>   
         ";
         
         echo "</div>"

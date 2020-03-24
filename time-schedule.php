@@ -67,23 +67,19 @@
           <div class='container'>
             <h4 class='mt-4 text-secondary'>Horários Disponíveis</h4><hr>
         ";
-        //echo "<ul class='time-ul mt-5 mb-2 p-2'>";
+
         do{
             list($hora, $minuto) = explode(':', $inicio);
             $time_schedule_value = "$inicio \r\n";
             $inicio = date("H:i", mktime($hora, $minuto + $intervalo) );
-            //echo $time_schedule_value;
             $count_time_schedule = mysqli_num_rows($time_schedule_value);
 
-            /*echo "
-                <li class='rounded'>
-                    <input type='radio' value='$time_schedule_value' id='$time_schedule_value' name='time_schedule'>
-                    <label for='time_schedule'>$time_schedule_value</label>
-                </li>
-            ";*/
+            /* echo "
+              <a href='resume-schedule.php?time=$time_schedule_value&&date=$date_schedule&&local=$clinic_schedule&&spec=$spec_schedule&&doctor=$doctor_schedule' class='btn btn-outline-info ml-2 mt-2 mr-2'>$time_schedule_value</a>
+            "; */
 
             echo "
-              <a href='resume-schedule.php?time=$time_schedule_value&&date=$date_schedule&&local=$clinic_schedule&&spec=$spec_schedule&&doctor=$doctor_schedule' class='btn btn-outline-info ml-2 mt-2 mr-2'>$time_schedule_value</a>
+              <a href='validate-schedule.php?time=$time_schedule_value&&date=$date_schedule&&local=$clinic_schedule&&spec=$spec_schedule&&doctor=$doctor_schedule' class='btn btn-outline-info ml-2 mt-2 mr-2'>$time_schedule_value</a>
             ";
         }       
         while( $inicio <= $final );
