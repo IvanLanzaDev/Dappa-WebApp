@@ -9,7 +9,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dappa">
-        <a class="navbar-brand text-white mx-auto pr-5 dappa-logo-font" href="#">Dappa</a>
+        <a class="navbar-brand text-white mx-auto pr-5 dappa-logo-font" href="dashboard-clinic.php">Dappa</a>
         <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,11 +26,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="my-doctors.php"><i class="fas fa-clinic-medical fa-sm"></i>&nbsp; Meus Especialistas</a>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-user fa-sm"></i>&nbsp; Minha Conta</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt fa-sm"></i> &nbsp;Sair</a>
+                    <a class="nav-link" href="index.php"><i class="fas fa-sign-out-alt fa-sm"></i> &nbsp;Sair</a>
                 </li>
             </ul>
         </div>

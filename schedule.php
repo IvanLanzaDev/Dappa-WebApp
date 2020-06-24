@@ -50,7 +50,9 @@
             echo "
                 <i class='fas fa-heart green-default fa-7x mb-3 mt-5'></i>
                 <h2 class='text-secondary'>Prontinho</h2>
-                <p class='lead text-secondary'>Seu agendamento está pré agendado. <br><br> Em brenve</p>
+                <p class='lead text-secondary'>Seu agendamento está pré agendado. <br><br> Em breve o consultório entrará em contato para confirmar o seu agendamento.</p>
+
+                <a href='dashboard.php' class='btn btn-lg btn-block btn-outline-info mt-4'>Voltar ao início</a>
         
                 
             ";

@@ -26,7 +26,18 @@
     <div class="card mt-3 mb-4">
       <div class="card-body">
       <h3 class="text-center text-muted">Meus Especialistas</h3>
-      <a href="my-new-doctors.php" class="btn btn-info btn-block mt-3">Ver especialistas cadastrados</a>
+
+      <?php 
+
+      if($count_clinic_doctors != 0) {
+
+        echo "<small> <p class='text-success text-center'> Você possui $count_clinic_doctors médicos cadastrados </p> </small>";
+
+        echo "<a href='my-new-doctors.php' class='btn btn-info btn-block mt-3'>Ver especialistas cadastrados</a>";
+      }
+      ?>
+
+      
       <small><p class="text-secondary text-center mt-3">Preencha os campos abaixo corretamente para cadastrar novo especialista.</p></small>
 <hr>
         <form method="POST" action="">
@@ -35,6 +46,14 @@
             </div>
             <div class="form-group">
                 <input type="text" class="form-control crm" placeholder="CRM" name="crm_doctors">
+            </div>
+            <div class="form-group">
+                <select class="custom-select" name="sex_doctors">
+                    <option selected>Sexo</option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Prefiro não dizer</option>
+                </select>
             </div>
             <div class="form-group">
             <select class="custom-select" name="spec_doctors">

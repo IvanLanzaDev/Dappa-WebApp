@@ -1,3 +1,4 @@
+<?php include("functions.class.php"); include("session.class.php");?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -9,7 +10,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dappa">
-        <a class="navbar-brand text-white mx-auto pr-5 dappa-logo-font" href="#">Dappa</a>
+        <a class="navbar-brand text-white mx-auto pr-5 dappa-logo-font" href="dashboard.php">Dappa</a>
         <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,14 +20,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard.php"><i class="fas fa-home fa-sm"></i>&nbsp; Início </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="search.php"><i class="fas fa-search fa-sm"></i>&nbsp; Buscar Consultas </a>
-                </li>
-                <li class="nav-item">
+                <?php
+                    if($count_verify_users == 0) {
+                        echo "
+                        <li class='nav-item'>
+                            <a class='nav-link' href='search.php'><i class='fas fa-search fa-sm'></i>&nbsp; Buscar Consultas </a>
+                         </li>
+                        ";
+                    }
+                ?>
+                
+                <!--<li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-user fa-sm"></i>&nbsp; Minha Conta</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt fa-sm"></i> &nbsp;Sair</a>
+                    <a class="nav-link" href="index.php"><i class="fas fa-sign-out-alt fa-sm"></i> &nbsp;Sair</a>
                 </li>
             </ul>
         </div>

@@ -20,24 +20,36 @@
   </head>
 
   <body class="body-app">
-    <?php include("header-clinic.class.php"); ?>
+    <?php include("header-doctor.class.php"); ?>
 
   <div class="container">
     <div class="card mt-3 mb-4">
       <div class="card-body">
-      <h3 class="text-center text-muted">Editar dados do especialista</h3>
-      <small><p class="text-secondary text-center mt-3">Após editar os dados não se esqueça de clicar no botao salvar.</p></small>
+      <h3 class="text-center text-muted">Meu Cadastro</h3>
+
+
+      
+      <small><p class="text-secondary text-center mt-3">Preencha os campos abaixo corretamente para cadastrar novo especialista.</p></small>
 <hr>
         <form method="POST" action="">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nome do especialista" name="name_doctors" value="<?php echo $get_doctor_url_info[name_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Nome do especialista" name="" value="<?php echo $logged_user["name_users"]; ?>" disabled>
+                <input type="hidden" class="form-control" placeholder="Nome do especialista" name="name_doctors" value="<?php echo $logged_user["name_users"]; ?>">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control crm" placeholder="CRM" name="crm_doctors" value="<?php echo $get_doctor_url_info[crm_doctors]; ?>">
+                <input type="text" class="form-control crm" placeholder="CRM" name="crm_doctors">
+            </div>
+            <div class="form-group">
+                <select class="custom-select" name="sex_doctors">
+                    <option selected>Sexo</option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Prefiro não dizer</option>
+                </select>
             </div>
             <div class="form-group">
             <select class="custom-select" name="spec_doctors">
-              <option selected><?php echo $get_doctor_url_info[spec_doctors]; ?></option>
+              <option selected>Especialidade</option>
               <?php
               
                 while($list_spec_doctors = mysqli_fetch_array($get_specs_select_input)){
@@ -51,7 +63,7 @@
             </div>
             <div class="form-group">
             <select class="custom-select" name="local_doctors">
-              <option selected><?php echo $get_doctor_url_info[local_doctors]; ?></option>
+              <option selected>Local de atendimento</option>
               <?php
               
                 while($list_local_doctors = mysqli_fetch_array($get_clinics)){
@@ -69,35 +81,36 @@
 
 
             <div class="form-group">
-                <input type="text" class="form-control rg" placeholder="RG" name="rg_doctors" value="<?php echo $get_doctor_url_info[rg_doctors]; ?>">
+                <input type="text" class="form-control rg" placeholder="RG" name="rg_doctors">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control cpf" placeholder="CPF" name="cpf_doctors" value="<?php echo $get_doctor_url_info[cpf_doctors]; ?>">
+                <input type="text" class="form-control cpf" placeholder="CPF" name="cpf_doctors">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Endereço" name="address_doctors" value="<?php echo $get_doctor_url_info[address_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Endereço" name="address_doctors">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Cidade" name="city_doctors" value="<?php echo $get_doctor_url_info[city_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Cidade" name="city_doctors">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Estado" name="state_doctors" value="<?php echo $get_doctor_url_info[state_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Estado" name="state_doctors">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Pais" name="country_doctors" value="<?php echo $get_doctor_url_info[country_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Pais" name="country_doctors">
             </div>
 
             <hr>
 
             <div class="form-group">
-                <input type="text" class="form-control phone_with_ddd" placeholder="Telefone" name="tel_doctors" value="<?php echo $get_doctor_url_info[tel_doctors]; ?>">
+                <input type="text" class="form-control phone_with_ddd" placeholder="Telefone" name="tel_doctors">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control celphone" placeholder="Celular" name="cel_doctors" value="<?php echo $get_doctor_url_info[cel_doctors]; ?>">
+                <input type="text" class="form-control celphone" placeholder="Celular" name="cel_doctors">
             </div>
 
+            <input type="hidden" value="<?php echo $user_login_info['id_users']; ?>" name="id_clinic_doctors">
 
-            <button type="submit" class="btn btn-success btn-block" name="btn_edit_doctor">Salvar</button>
+            <button type="submit" class="btn btn-success btn-block" name="btn_new_doctor_profile">Cadastrar</button>
         </form>
 
       </div>

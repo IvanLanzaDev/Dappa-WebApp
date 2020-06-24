@@ -58,6 +58,9 @@
         $get_doctor_resume_schedule = mysqli_query($link, "SELECT * FROM doctors WHERE id_doctors = '$doctor_schedule'");
         $list_doctor_resume_schedule = mysqli_fetch_array($get_doctor_resume_schedule);
 
+
+        //GET USER ID
+        $pacient_id = $user_login_info[id_users];
         echo "
           <div class='container'>
             <h4 class='mt-4 text-secondary text-center'>Agendamento</h4><hr>
@@ -109,6 +112,7 @@
                   <input type='hidden' name='doctor_schedule' value='$doctor_schedule'>
                   <input type='hidden' name='spec_schedule' value='$spec_schedule'>
                   <input type='hidden' name='confirm_schedule' value='Não'>
+                  <input type='hidden' name='paciente_id_schedule' value='$pacient_id'>
 
                   <button type='submit' class='btn btn-success btn-lg btn-block mb-3' name='confirm_payment_btn'>Efetuar Pagamento</button>
                   <button type='submit' class='btn btn-outline-info btn-lg btn-block' name='consult_payment_btn'>Pagar no consultório</button>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 
 <head>
     <title>Conta criada na Hostinger - Hostinger</title>
@@ -227,21 +227,21 @@
                 <span class="icon-bar"></span> <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.hostinger.com.br"><img src="https://raw.githubusercontent.com/hostinger/banners/master/hostinger_welcome/images/hostinger-logo.png" width="120" alt="Hostinger"></a>
+            <a class="navbar-brand" href="https://www.hostinger.com.br"><img src="https://raw.githubusercontent.com/hostinger/banners/master/hostinger_welcome/images/hostinger-logo.png" width="120"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="https://www.hostinger.com.br/tutoriais/" rel="nofollow"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Tutoriais</a>
+                    <a href="https://www.hostinger.com.br/tutoriais/"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Tutoriais</a>
                 </li>
                 <li>
-                    <a href="https://www.hostinger.com.br/programa-de-afiliados" rel="nofollow"><i aria-hidden="true" class="fa fa-trophy"></i> Ganhe Conosco</a>
+                    <a href="https://www.hostinger.com.br/programa-de-afiliados"><i aria-hidden="true" class="fa fa-trophy"></i> Ganhe Conosco</a>
                 </li>
                 <li>
-                    <a href="https://www.hostinger.com.br/afiliados-brasil/login" rel="nofollow"><i aria-hidden="true" class="fa fa-user"></i> Afiliados</a>
+                    <a href="https://www.hostinger.com.br/afiliados-brasil/login"><i aria-hidden="true" class="fa fa-user"></i> Afiliados</a>
                 </li>
                 <li>
-                    <a href="https://www.hostinger.com.br/cpanel-login" rel="nofollow"><i aria-hidden="true" class="fa fa-lock"></i> Entrar</a>
+                    <a href="https://www.hostinger.com.br/cpanel-login"><i aria-hidden="true" class="fa fa-lock"></i> Entrar</a>
                 </li>
             </ul>
         </div>
@@ -250,8 +250,8 @@
 <div class="empty-account-page">
     <div class="container">
         <div class="row congratz">
-            <h1>Sua conta foi criada com sucesso!</h1><em></em>
-            <h2 id="pathName"><em></em></h2>
+            <h1>Sua conta foi criada com sucesso!</h1><i></i>
+            <h2 id="pathName"><i></i></h2>
         </div>
         <div class="row message">
             <p>O Website <span id="website" style="word-break:break-all;"></span> foi criado com sucesso no servidor! Por favor apague o arquivo <span style="font-weight: bold;">default.php</span> da pasta public_html e então envie seu website utilizando FTP ou o Gerenciador de Arquivos.</p>
@@ -269,7 +269,7 @@
                     <br>
                     <p>Ter um site se tornou essencial para qualquer pessoa ou empresa que deseja fortalecer a sua imagem e presença na web...</p>
                     <br>
-                    <a href="https://www.hostinger.com.br/tutoriais/criar-site-hostinger/" rel="nofollow">Saber mais</a>
+                    <a href="https://www.hostinger.com.br/tutoriais/criar-site-hostinger/">Saber mais</a>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 column-custom-wrap">
@@ -278,7 +278,7 @@
                     <br>
                     <p>Transferir dados e arquivos do seu computador para um servidor de hospedagem de sites ficou ainda mais fácil com os serviços de FTP...</p>
                     <br>
-                    <a href="https://www.hostinger.com.br/tutoriais/como-configurar-filezilla/" rel="nofollow">Saber mais</a>
+                    <a href="https://www.hostinger.com.br/tutoriais/como-configurar-filezilla/">Saber mais</a>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 column-custom-wrap">
@@ -287,7 +287,7 @@
                     <br>
                     <p>Gerenciador de Arquivos é uma ferramenta disponível na maioria das plataformas de hospedagem. Ela permite que você administre...</p>
                     <br>
-                    <a href="https://www.hostinger.com.br/tutoriais/como-utilizar-o-gerenciador-de-arquivos-hostinger/" rel="nofollow">Saber mais</a>
+                    <a href="https://www.hostinger.com.br/tutoriais/como-utilizar-o-gerenciador-de-arquivos-hostinger/">Saber mais</a>
                 </div>
             </div>
         </div>
@@ -295,11 +295,11 @@
         <div class="footer">
             <div class="row">
                 <div class="text-center" style="margin-bottom: 10px;">
-                    <a href="https://www.hostinger.com.br/base-de-conhecimento" rel="nofollow">Base de Conhecimento</a> |
-                    <a href="https://www.hostinger.com.br/cpanel-login" rel="nofollow">Área do Cliente</a>
+                    <a href="https://www.hostinger.com.br/base-de-conhecimento">Base de Conhecimento</a> |
+                    <a href="https://www.hostinger.com.br/cpanel-login">Área do Cliente</a>
                 </div>
                 <div class="copyright text-center">
-                    Hostinger © 2019. Todos os direitos reservados
+                    Hostinger © 2017. Todos os direitos reservados
                 </div>
             </div>
         </div>

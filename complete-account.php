@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#003F5D">
 
-    <title>Dappa - Dashboard Consultório</title>
+    <title>Dappa</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -20,84 +20,70 @@
   </head>
 
   <body class="body-app">
-    <?php include("header-clinic.class.php"); ?>
+    <?php include("header.class.php"); ?>
 
   <div class="container">
     <div class="card mt-3 mb-4">
       <div class="card-body">
-      <h3 class="text-center text-muted">Editar dados do especialista</h3>
-      <small><p class="text-secondary text-center mt-3">Após editar os dados não se esqueça de clicar no botao salvar.</p></small>
+      <h3 class="text-center text-muted">Complete seu cadastro</h3>
+
+      
+      <small><p class="text-secondary text-center mt-3">Preencha os campos abaixo corretamente para finalizar seu cadastro.</p></small>
 <hr>
         <form method="POST" action="">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nome do especialista" name="name_doctors" value="<?php echo $get_doctor_url_info[name_doctors]; ?>">
+                <input type="date" class="form-control" placeholder="Data de Nascimento" name="born_users" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control crm" placeholder="CRM" name="crm_doctors" value="<?php echo $get_doctor_url_info[crm_doctors]; ?>">
+                <input type="text" class="form-control cpf" placeholder="CPF" name="cpf_users" required>
             </div>
             <div class="form-group">
-            <select class="custom-select" name="spec_doctors">
-              <option selected><?php echo $get_doctor_url_info[spec_doctors]; ?></option>
-              <?php
-              
-                while($list_spec_doctors = mysqli_fetch_array($get_specs_select_input)){
-                  echo "
-                    <option>$list_spec_doctors[name_especs]</option>
-                  ";
-                }
-              
-              ?>
-            </select>
+                <input type="text" class="form-control" placeholder="Nome Social (opcional)" name="social_name_users">
             </div>
             <div class="form-group">
-            <select class="custom-select" name="local_doctors">
-              <option selected><?php echo $get_doctor_url_info[local_doctors]; ?></option>
-              <?php
-              
-                while($list_local_doctors = mysqli_fetch_array($get_clinics)){
-                  echo "
-                    <option>$list_local_doctors[name_clinics]</option>
-                  ";
-                }
-              
-              ?>
-            </select>
+                <select class="custom-select" name="sex_users">
+                    <option selected>Sexo</option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Outro</option>
+                    <option>Prefiro não dizer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control weight" placeholder="Peso" name="weight_users" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control height" placeholder="Altura" name="height_users" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control celphone" placeholder="Telefone" name="phone_users" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Endereço" name="address_users" required>
+                <small class="form-text text-muted">Exemplo: Rua da subida, 123, CEP: 00000 - 000</small>
             </div>
             
 
-            <hr>
+            
 
 
             <div class="form-group">
-                <input type="text" class="form-control rg" placeholder="RG" name="rg_doctors" value="<?php echo $get_doctor_url_info[rg_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Cidade" name="city_users" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control cpf" placeholder="CPF" name="cpf_doctors" value="<?php echo $get_doctor_url_info[cpf_doctors]; ?>">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Endereço" name="address_doctors" value="<?php echo $get_doctor_url_info[address_doctors]; ?>">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Cidade" name="city_doctors" value="<?php echo $get_doctor_url_info[city_doctors]; ?>">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Estado" name="state_doctors" value="<?php echo $get_doctor_url_info[state_doctors]; ?>">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Pais" name="country_doctors" value="<?php echo $get_doctor_url_info[country_doctors]; ?>">
+            <input type="text" class="form-control" placeholder="Estado" name="state_users" required>
             </div>
 
             <hr>
 
             <div class="form-group">
-                <input type="text" class="form-control phone_with_ddd" placeholder="Telefone" name="tel_doctors" value="<?php echo $get_doctor_url_info[tel_doctors]; ?>">
+                <input type="text" class="form-control" placeholder="Nome de contato de emergência" name="emergency_name_users" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control celphone" placeholder="Celular" name="cel_doctors" value="<?php echo $get_doctor_url_info[cel_doctors]; ?>">
+            <input type="text" class="form-control celphone" placeholder="Telefone contato de emergência" name="emergency_tel_users" required>
             </div>
 
-
-            <button type="submit" class="btn btn-success btn-block" name="btn_edit_doctor">Salvar</button>
+            <button type="submit" class="btn btn-success btn-block" name="btn_complete_account_user">Finalizar Cadastro</button>
         </form>
 
       </div>
@@ -122,6 +108,8 @@
   $('.phone_with_ddd').mask('(00) 0000-0000');
   $('.phone_us').mask('(000) 000-0000');
   $('.celphone').mask('(00) 0 0000-0000');
+  $('.weight').mask('000,00 kg' , {reverse: true});
+  $('.height').mask('0,00 m', {reverse: true});
   $('.mixed').mask('AAA 000-S0S');
   $('.cpf').mask('000.000.000-00', {reverse: true});
   $('.rg').mask('00.000.000-00', {reverse: true});

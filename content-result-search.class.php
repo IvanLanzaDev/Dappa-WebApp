@@ -42,17 +42,13 @@
                 <h6 class='text-black-50'> $list_search_doctor[local_doctors]</h6><br><br>
                 </small>
               </div>
-              <div class='d-flex justify-content-end align-items-end'>
-                <p class='lead green-default mr-3'> R$ 000,00 </p>
-              </div>
+              
               <div class='col-12 ml-4 mb-3'>
                 <div class='row d-flex justify-content-between'>
-                  <a href='details-scheduling.php?date=$date_search&&local=$list_search_doctor[local_doctors]&&spec=$list_search_doctor[spec_doctors]&&doctor=$list_search_doctor[id_doctors]' class='btn btn-outline-success confirm-doctor'>
+                  <a href='details-scheduling.php?date=$date_search&&local=$list_search_doctor[local_doctors]&&spec=$list_search_doctor[spec_doctors]&&doctor=$list_search_doctor[id_doctors]' class='btn btn-success confirm-doctor'>
                    Mais Detalhes
                   </a>
-                  <a href='#' class='btn btn-success confirm-doctor mr-5'>
-                   Agendar Consulta
-                  </a>
+                  
                 </div>
               </div>
               </div>
